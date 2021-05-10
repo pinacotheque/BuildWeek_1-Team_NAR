@@ -97,3 +97,24 @@ header img{
     padding: 16px 14px 18px
 }
 
+.spotify {
+    border: 1px solid ;
+    font-family: Helvetica, sans-serif;
+   font-size: medium;
+    
+}
+
+.spotify:hover {
+    background-color: #616467;
+    color: white;
+    
+}
+
+footer div>p>.Terms{
+    color: rgb(30, 202, 30)
+}
+
+footer div>p{
+    font-size: small;
+}
+
