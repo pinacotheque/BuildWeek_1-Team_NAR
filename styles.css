@@ -1,0 +1,125 @@
+
+/* Rabia*/
+
+/* Header*/
+
+/* Header Image */
+header img{
+    width: 15%;
+    height: 25%;
+}
+
+/* Social Buttons */
+
+:root {
+    /* spotify standard green */
+    --green: rgb(21, 136, 62);  
+    --greenFocus: rgb(26, 187, 91);   
+}
+/*============= Rabia Social Buttons  ============== */
+
+
+/* button h5 */
+#socialMediaOptions h5{
+    font-family:Helvetica, sans-serif;
+    font-size: 18px;
+    letter-spacing: normal;
+    text-align: center;
+}
+
+/* All social buttons */
+#socialMediaOptions button{
+    width: 90%;
+    padding-top: 14px;
+    font-size: 16px;
+}
+
+/* facebook button */
+#socialMediaOptions .facebook{
+    font-family:Helvetica, sans-serif;
+    background-color: #3b5998;
+}
+
+/* facebook hover */
+#socialMediaOptions .facebook:hover{
+    background-color: #4c659c;
+}
+
+/* apple button */
+#socialMediaOptions .apple{
+    font-family:Helvetica, sans-serif;
+    background-color: #000000;
+}
+
+/* apple hover */
+#socialMediaOptions .apple:hover{
+    background-color: #272525;
+}
+
+/* google button */
+#socialMediaOptions .google{
+    font-family:Helvetica, sans-serif;
+    background-color: white;
+    color: #616467;
+    border: 3px solid #616467;
+}
+
+/* google logo in button */
+#socialMediaOptions .google>img{
+    width: 20px;
+    height: 20px;
+}
+
+/* google hover */
+#socialMediaOptions .google:hover{
+    background-color: #616467;
+    color: white;
+}
+
+/* Hr row */
+#socialMediaOptions .row:last-of-type{
+    width: 97%;
+}
+
+/* before hr, padding */
+#socialMediaOptions .row:last-of-type::before{
+    content: " ";
+    display: table;
+}
+
+/* HR itself */
+#socialMediaOptions .row .twohr{
+    border-top: 1px solid #d9dadc;
+    display: block;
+    line-height: 1px;
+    margin: 15px 15px;
+    position: relative;
+    text-align: center;
+}
+
+/* targeting OR in hr */
+#socialMediaOptions .row .twohr strong{
+    background: #fff;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 0 20px;
+}
+
+/* after hr, padding */
+#socialMediaOptions .row:last-of-type::after{
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+
+/* log in button */
+.btn-primary {
+    background-color: var(--green);
+    border-color: var(--green);
+}
+
+.form-check #loginButton {
+    padding: 16px 14px 18px
+}
+
