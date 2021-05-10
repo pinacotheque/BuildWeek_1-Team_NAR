@@ -1,4 +1,14 @@
-/* Rabia Social Buttons */
+/* Rabia*/
+
+/* Header*/
+
+/* Header Image */
+header img{
+    width: 15%;
+    height: 25%;
+}
+
+/* Social Buttons */
 
 /* button h5 */
 #socialMediaOptions h5{
@@ -59,7 +69,7 @@
 
 /* Hr row */
 #socialMediaOptions .row:last-of-type{
-    width: 100%;
+    width: 97%;
 }
 
 /* before hr, padding */
@@ -73,7 +83,7 @@
     border-top: 1px solid #d9dadc;
     display: block;
     line-height: 1px;
-    margin: 15px 0;
+    margin: 15px 15px;
     position: relative;
     text-align: center;
 }
@@ -92,3 +102,4 @@
     display: table;
     clear: both;
 }
+
