@@ -1,3 +1,4 @@
+
 /* Rabia*/
 
 /* Header*/
@@ -9,6 +10,14 @@ header img{
 }
 
 /* Social Buttons */
+
+:root {
+    /* spotify standard green */
+    --green: rgb(21, 136, 62);  
+    --greenFocus: rgb(26, 187, 91);   
+}
+/*============= Rabia Social Buttons  ============== */
+
 
 /* button h5 */
 #socialMediaOptions h5{
@@ -101,5 +110,16 @@ header img{
     content: " ";
     display: table;
     clear: both;
+}
+
+
+/* log in button */
+.btn-primary {
+    background-color: var(--green);
+    border-color: var(--green);
+}
+
+.form-check #loginButton {
+    padding: 16px 14px 18px
 }
 
