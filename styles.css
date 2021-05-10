@@ -22,14 +22,14 @@ header img{
 /* button h5 */
 #socialMediaOptions h5{
     font-family:Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: 14px;
     letter-spacing: normal;
     text-align: center;
 }
 
 /* All social buttons */
 #socialMediaOptions button{
-    width: 90%;
+    width: 100%;
     padding-top: 14px;
     font-size: 16px;
 }
@@ -76,40 +76,14 @@ header img{
     color: white;
 }
 
-/* Hr row */
-#socialMediaOptions .row:last-of-type{
-    width: 97%;
-}
-
-/* before hr, padding */
-#socialMediaOptions .row:last-of-type::before{
-    content: " ";
-    display: table;
-}
-
-/* HR itself */
-#socialMediaOptions .row .twohr{
-    border-top: 1px solid #d9dadc;
-    display: block;
-    line-height: 1px;
-    margin: 15px 15px;
-    position: relative;
-    text-align: center;
-}
-
 /* targeting OR in hr */
-#socialMediaOptions .row .twohr strong{
+#socialMediaOptions .or{
     background: #fff;
     font-size: 12px;
     letter-spacing: 1px;
     padding: 0 20px;
-}
-
-/* after hr, padding */
-#socialMediaOptions .row:last-of-type::after{
-    content: " ";
-    display: table;
-    clear: both;
+    bottom: 7px;
+    left: 45%;
 }
 
 
