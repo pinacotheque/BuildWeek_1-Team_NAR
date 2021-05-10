@@ -88,13 +88,50 @@ header img{
 
 
 /* log in button */
+
+/* .custom-checkbox .custom-check-input:checked {
+    background-color: var(--greenFocus) !important;
+}
+.custom-checkbox .custom-check-input:active {
+    background-color: var(--greenFocus);
+} */
+
 .btn-primary {
     background-color: var(--green);
     border-color: var(--green);
 }
 
-.form-check #loginButton {
-    padding: 16px 14px 18px
+.btn-primary:hover {
+    background-color: var(--greenFocus);
+    border-color: var(--greenFocus);
+}
+
+.btn-primary:not(:disabled):not(.disabled):active {
+    background-color: var(--greenFocus);
+    border-color: var(--greenFocus);
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus {
+    background-color: var(--greenFocus);
+    border-color: var(--greenFocus);
+    box-shadow: 0 0 0 0.2rem rgb(30 202 30 / 50%);
+}
+
+.btn-primary:focus {
+    background-color: var(--greenFocus);
+    border-color: var(--greenFocus);
+    box-shadow: 0 0 0 0.2rem rgb(30 202 30 / 50%);
+}
+
+#loginButton {
+    margin-right: 15px;
+    /* font-size: 12px; */
+    letter-spacing: 1px;
+    padding: 1em 6em;
+}
+
+#personalDetails p{
+    color: var(--greenFocus);
 }
 
 .spotify {
