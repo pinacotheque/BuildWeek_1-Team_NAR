@@ -20,9 +20,9 @@ header img{
 
 
 /* button h5 */
-#socialMediaOptions h5{
+#socialMediaOptions h5 strong{
     font-family:Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: normal;
     text-align: center;
 }
@@ -94,6 +94,14 @@ header img{
 }
 .custom-checkbox .custom-check-input:active {
     background-color: var(--greenFocus);
+} */
+
+/* #personalDetails input[type="checkbox"]:checked::after{
+    background-color: yellow;
+}
+
+#personalDetails input[type="checkbox"]:active{
+    background-color: yellow;
 } */
 
 .btn-primary {
