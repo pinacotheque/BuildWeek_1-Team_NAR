@@ -313,45 +313,33 @@ footer {
     visibility: hidden;  
     position: absolute;
     right: 50%;
-    transform: translateX(26px)
+    transform: translateX(26px);
 }
 
 .playhr{
     border-top: 2px solid #7a7a7a ;
 }
 
-/* .bi-volume-up{
-    left: -10%;
-    top: 8px;
-    z-index: 10;
-
-    background-color: #2c2c2c;
-}
- */
- .dIsYZz{
-     color: #7a7a7a!important;
- }
-
 .slider{
-    -webkit-appearance: none;  /* Override default CSS styles */
+    -webkit-appearance: none;  
     appearance: none;
     height: 4px;
-    background: #d3d3d3; /* Grey background */
-    outline: none; /* Remove outline */
-    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    background: #d3d3d3; 
+    outline: none; 
+    opacity: 0.7; 
+    -webkit-transition: .2s; 
     transition: opacity .2s;
 }
 
 .slider:hover {
-    opacity: 1; /* Fully shown on mouse-over */
+    opacity: 1; 
   }
 
   .slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
+    -webkit-appearance: none; 
     appearance: none;
-    background: #d3d3d3; /* Green background */
-    cursor: pointer; /* Cursor on hover */
+    background: #d3d3d3; 
+    cursor: pointer; 
   }
 
 /* for other pages */
@@ -368,7 +356,6 @@ footer {
 
 /*============= Rabia footer END  ============== */
 
-}
 /* ======================================  */
 
 /* font call to content section  */
