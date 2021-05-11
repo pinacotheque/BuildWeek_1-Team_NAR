@@ -179,3 +179,24 @@ footer div>p{
     z-index: 10;
 
 }
+
+.queen-II {
+    color: white;
+    
+}
+p.small{
+    color: grey;
+    font-size: x-small;
+}
+#music-album{
+    color: grey;
+}
+
+.extra{
+    color: grey;
+}
+
+.navbar{
+    background-color: rgb(12, 10, 10);
+    height: 50px;
+}
