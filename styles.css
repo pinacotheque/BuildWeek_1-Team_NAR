@@ -163,3 +163,19 @@ footer div>p{
     font-size: small;
 }
 
+#menu {
+    background-color: black;
+    min-height: 100vh;
+}
+
+#content {
+    background-color: #121212;
+    min-height: 100vh;
+}
+
+#player {
+    background-color: #181818;
+    min-height: 15vh;
+    z-index: 10;
+
+}
