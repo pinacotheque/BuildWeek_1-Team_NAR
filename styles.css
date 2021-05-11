@@ -179,24 +179,40 @@ footer div>p{
     z-index: 10;
 
 }
-
+/* h5  */
 .queen-II {
     color: white;
     
 }
+/* p in first col */
 p.small{
     color: grey;
     font-size: x-small;
 }
+/* tbody second col */
 #music-album{
     color: grey;
+    font-size: small;
 }
-
+/* icon heart */
 .extra{
-    color: grey;
+    color: rgb(201, 199, 199);
 }
 
+/* navbar on the top */
 .navbar{
     background-color: rgb(12, 10, 10);
     height: 50px;
+}
+
+/* this is p inside the table */
+td>p {
+    font-size: x-small;
+    margin-bottom: -15px;
+    
+}
+
+/* inside table */
+td>a {
+    color: rgb(236, 232, 232);
 }
