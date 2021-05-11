@@ -311,16 +311,38 @@ footer {
     border-top: 2px solid #7a7a7a ;
 }
 
-.bi-volume-up{
-    left: 0%;
+/* .bi-volume-up{
+    left: -10%;
     top: 8px;
     z-index: 10;
     background-color: #2c2c2c;
 }
+ */
+ .dIsYZz{
+     color: #7a7a7a!important;
+ }
 
-.volume hr{
-    border-top: 5px solid #7a7a7a;
-} 
+.slider{
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    height: 4px;
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    background: #d3d3d3; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
 
 /* for other pages */
 #player img{
