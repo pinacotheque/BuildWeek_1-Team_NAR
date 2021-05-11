@@ -163,19 +163,125 @@ footer div>p{
     font-size: small;
 }
 
+/*============= Rabia Side Bar  ============== */
+
 #menu {
     background-color: black;
     min-height: 100vh;
 }
+
+#menu ul{
+    list-style:none;
+}
+
+#menu ul a{
+   text-decoration: none;
+   color: #B1B1B1;
+}
+
+#menu ul li{   
+    font-size: larger;
+ }
+
+ #menu ul li>:hover{   
+    color: white;
+ }
+
+ #menu ul svg{
+    color: #B1B1B1;
+    width: 30px; ;
+    height:30px;
+ }
+
+ /* HOME SIDE BAR */
+
+/*  #menu .sideBottom{
+     color: #B1B1B1;
+ }
+
+ #menu .sideBottom .sign{
+     background-color: white;
+     color: black;
+     border-color: white;
+ }
+
+ #menu .sideBottom .sign:hover{
+    background-color: #B1B1B1;
+    color: black;
+    border-color: #B1B1B1;
+}
+
+ #menu .sideBottom .login{
+    background-color: black;
+    color: #B1B1B1;
+    border-color: #B1B1B1;
+}
+
+#menu .sideBottom .login:hover{
+    background-color: #B1B1B1;
+    color: black;
+    border-color: #B1B1B1;
+}
+
+.sideBottom a{
+    color: #B1B1B1;
+    text-decoration: none;
+}
+
+.sideBottom a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.sideBottom .row>.col-6:first-of-type a:first-of-type{
+    border-right: 1px solid #B1B1B1;
+} */
+
+/* SIDE BAR OTHER */
+
+#menu .sideBottom{
+    color: #B1B1B1;
+}
+
+#menu .sideBottom a{
+    text-decoration: none;
+    color: #7a7a7a ;       
+}
+
+#menu .sideBottom a:hover{
+    text-decoration: none;
+    color: #9e9999 ;       
+}
+
+#menu .sideBottom svg{
+    color: #7a7a7a ;    
+}
+
+.sideBottom hr{
+    border-top: 1px solid #7a7a7a ;
+}
+
+.sideBottom img{
+    width: 45px;
+}
+
+.sideBottom p{
+    color: white;
+}
+
+/*============= Rabia Side Bar  END============== */
 
 #content {
     background-color: #121212;
     min-height: 100vh;
 }
 
+/*============= Rabia footer  ============== */
+
 #player {
     background-color: #181818;
     min-height: 15vh;
     z-index: 10;
-
 }
+
+/*============= Rabia footer END  ============== */
