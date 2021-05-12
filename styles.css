@@ -279,12 +279,6 @@ footer div>p{
 
 /*============= Rabia Side Bar  END============== */
 
-#content {
-    background-color: #121212;
-    min-height: 100vh;
-    color: white;
-}
-
 /*============= Rabia footer  ============== */
 
 footer {
@@ -364,13 +358,22 @@ footer {
 
 /*============= Rabia footer END  ============== */
 
+
 /* ======================================  */
 
-/* font call to content section  */
+/* ============ Content Start ========================  */
 #content {
+    background-color: #121212;
+    min-height: 100vh;
+    color: white;
+    padding-bottom: 200px;
+}
+
+/* font call to content section  */
+/* #content {
     font-family: "Circular Spotify Tx T Black";
     font-weight: lighter;
-}
+} */
 
 
 /* full card */
@@ -384,6 +387,7 @@ footer {
 #content .card:hover {
     background-color: rgb(40, 40, 40);
     cursor: pointer;
+    
 }
 
 /* heading of cards section  */
@@ -391,6 +395,11 @@ footer {
     font-size: 2.5em;
     letter-spacing: 2px;
 }
+
+#deckHeader>div>h3:hover {
+    text-decoration: underline;
+}
+
 /* description of cards section  */
 #deckHeader div>span {
     font-size: 1.25em;
@@ -398,9 +407,10 @@ footer {
 }
 /* card img  */
 #content .card img {
-    border-radius: 3em;
+    border-radius: 1.5em;
     padding: 25px;
 }
+
  /* in card heading (album name) */
 #content .card-body h5 {
     font-size: 25px;
@@ -417,23 +427,63 @@ footer {
 .jumbotron  {
     background-image: url(https://www.rollingstone.com/wp-content/uploads/2018/06/queen-news-of-the-world-opener-c5bda6ed-0bdf-42c0-8d93-7b29ec5c4259.jpg?resize=1800,1200&w=1200);
     background-size: cover;
-    min-height: 40vh;
+    min-height: 600px;
+}
+.jumbotron::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    left: 15px;
+    width: 100%;
+    min-height: 600px;
+    background: linear-gradient(180deg, rgba(19,19,19,0.75) 48%, rgba(19,19,19,1) 100%);
+    z-index: 0;
 }
 
-#artistNav {
-    margin-top: 180px;
-} 
+#artist-container {
+    height: 500px;
+}
+
+#artist-container p {
+    font-weight: lighter;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#follow-btn {
+    background-color: rgba(0, 0, 0, 0.3);
+    /* border-color: rgba(255, 255, 255, 0.757); */
+    margin-right: 15px;
+    /* font-size: 12px; */
+    letter-spacing: 1px;
+    padding: 1em 5em;
+}
 
 #artistNav a {
     font-size: larger;
-    color: rgba(255, 255, 255);
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.6);
+    z-index: 1;
 }
 
-/* #artistNav a:hover{
-    font-size: larger;
+#artistNav a:hover{
+    text-decoration: none;
     color: rgba(255, 255, 255);
-    
-} */
+}
+#artistNav a:hover::before {
+    content: '';
+    position: absolute;
+    width: 10%;
+    height: 1%;
+    border-radius: 2em;
+    bottom: -10px;
+    transform: translate(25%);
+    background-color: var(--greenFocus);
+    z-index: 2;
+}
+
 
 /*============= Rabia Artistpage start  ============== */
 #contentArtist{
@@ -545,3 +595,4 @@ footer {
 }
 /*============= Rabia Artistpage END  ============== */
 
+/* ============ Content END ========================  */
