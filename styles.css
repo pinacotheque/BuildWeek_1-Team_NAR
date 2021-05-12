@@ -595,9 +595,8 @@ footer {
 }
 /*============= Rabia Artistpage END  ============== */
 
-/* ============ Content END ========================  */
 
-/* ============ Home Start ======================= */
+/* ============ Home content Start ======================= */
 #contentHome {
     background: linear-gradient(135deg, rgba(38,66,103,1) 45%, rgba(19,19,19,1) 100%);
 }
@@ -645,7 +644,7 @@ footer {
 
  /* in card heading (album name) */
 #cardsDeck .card-body h5 {
-    font-size: 15px;
+    font-size: 14px;
     letter-spacing: 1px;
     margin-bottom: 0px;
 }
@@ -657,7 +656,6 @@ footer {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* ============ Home content ====================== */
 
 #contentHome li a{
     color:rgb(202, 198, 198);
