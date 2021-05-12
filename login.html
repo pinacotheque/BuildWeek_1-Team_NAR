@@ -16,7 +16,7 @@
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <title>Login</title>
     <link rel="stylesheet" href="styles.css" />
     <link
@@ -89,10 +89,11 @@
                   <label for="exampleInputPassword1">Password</label>
                   <input type="password" placeholder="Password" class="form-control" id="exampleInputPassword1">
                 </div>
-                <div class="row mb-3 mt-2 justify-content-between">                  
+                <div class="row mb-3 mt-2 d-flex justify-content-between ">                  
                    <div class="form-group form-check mt-3 ml-3">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                    <label class="form-check-label d-flex" for="exampleCheck1">Remember me</label>
+                   
                    </div>
                    <button id="loginButton" type="submit" class="btn badge-pill btn-primary">LOG IN</button>                  
                 </div>
@@ -131,18 +132,20 @@
           </div>
       </section>
       </div>
+
+
     </main>
 
-    <footer>
+    <section id="Aizada">
       <div class="container">
         <div class="row flex-column justify-content-center">
-        <div class="col col-lg-6 offset-lg-3 text-center">
-          <p>If you click "Log in with Facebook" and are not Spotify user, you will be registered and <br>
+        <div class="col col-lg-6 offset-lg-3 text-center login-footer p-1">
+          <p>If you click "Log in with Facebook" and are not Spotify user, you will be registered and 
           you agree to Spotify's  <a class= "Terms" href="#"> Terms & Conditions</a> and <a class= "Terms" href="#">Privacy & Policy</a>
         </p>
         </div>
       </div>
-    </footer>
+    </section>
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
