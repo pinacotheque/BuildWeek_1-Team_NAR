@@ -138,7 +138,6 @@ header img{
 }
 
 #loginButton {
-    display: flex;
     margin-right: 15px;
     /* font-size: 12px; */
     letter-spacing: 1px;
@@ -148,7 +147,7 @@ header img{
 #personalDetails p{
     color: var(--greenFocus);
 }
-/* =====footer of login page Aizada==== */
+
 .spotify {
     border: 1px solid ;
     font-family: Helvetica, sans-serif;
@@ -162,12 +161,12 @@ header img{
     
 }
 
-.login-footer>p>.Terms{
+footer div>p>.Terms{
     color: rgb(30, 202, 30)
 }
 
-.login-footer>p{
-    font-size: 15px;
+footer div>p{
+    font-size: small;
 }
 
 /*============= Rabia Side Bar  ============== */
@@ -363,12 +362,12 @@ footer {
 /* ======================================  */
 
 /* ============ Content Start ========================  */
-/* #content {
+#content {
     background-color: #121212;
     min-height: 100vh;
     color: white;
     padding-bottom: 200px;
-} */
+}
 
 /* font call to content section  */
 /* #content {
@@ -426,7 +425,7 @@ footer {
 }
 
 .jumbotron  {
-    background-image: url("artistassets/queen.jpg");
+    background-image: url(https://www.rollingstone.com/wp-content/uploads/2018/06/queen-news-of-the-world-opener-c5bda6ed-0bdf-42c0-8d93-7b29ec5c4259.jpg?resize=1800,1200&w=1200);
     background-size: cover;
     min-height: 600px;
 }
@@ -639,7 +638,6 @@ footer {
 
 /*============= Rabia Artistpage END  ============== */
 
-
 /* ============ Content END ========================  */
 
 /* h5  */
@@ -662,7 +660,11 @@ p.small{
     color: rgb(201, 199, 199);
 }
 
-
+/* navbar on the top */
+.navbar{
+    background-color: rgb(12, 10, 10);
+    height: 50px;
+}
 
 /* this is p inside the table */
 td>p {
@@ -674,152 +676,4 @@ td>p {
 /* inside table */
 td>a {
     color: rgb(236, 232, 232);
-
-    /* padding of third col of the table */
 }
-.col.duration{
-    padding-right: 6rem;
-}
-
-
-
-input[type="checkbox"]{
-   appearance: none;
-   -webkit-appearance: none;
-   height: 20px;
-   width: 20px;
-   background-color: #a7a7a5;
-   border-radius: 5px;
-   cursor: pointer;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-  outline: none;
-  position: absolute;
-
-}
-input[type="checkbox"]::after{
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content:"\f00c";
-    font-size: 18px;
-    color: white;
-    display: none;
-}
-input[type="checkbox"]:hover{
-    background-color: #5f5e5e;
-}
-input[type="checkbox"]:checked{
-    background-color: green;
-    
-}
-input[type="checkbox"]:checked::after{
-    display: flex;
-}
-
-/* ============ Home content Start ======================= */
-#contentHome {
-    background: linear-gradient(135deg, rgba(38,66,103,1) 45%, rgba(19,19,19,1) 100%);
-    padding-bottom: 200px;
-}
-
-
-/* full card */
-#cardsDeck .card {
-    color: white;
-    background-color: rgba(24, 24, 24, 0);
-    border-color: rgba(24, 24, 24, 0);
-    border-radius: 0.5em;
-
-}
-
-/* change card appearance on hover */
-#cardsDeck .card:hover {
-    transform: scale(1.09);
-    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    z-index: 3;
-}
-
-/* heading of cards section  */
-#deckHeader>div>h3 {
-    color: white;
-    font-size: 2em;
-    letter-spacing: 2px;
-}
-
-#deckHeader>div>h3:hover {
-    text-decoration: underline;
-}
-
-/* description of cards section  */
-#deckHeader div>span {
-    font-size: 1.25em;
-    color: rgba(255, 255, 255, 0.70);
-}
-/* card img  */
-#cardsDeck .card img {
-    border-radius: 1.1em;
-    padding: 15px;
-    padding-bottom: 0;
-}
-
- /* in card heading (album name) */
-#cardsDeck .card-body h5 {
-    font-size: 14px;
-    letter-spacing: 1px;
-    margin-bottom: 0px;
-}
-/* in card p (artist name) */
-#cardsDeck .card-body p {
-    font-size: 10px;
-    font-weight: lighter;
-    letter-spacing: 1.5px;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-
-#contentHome li a{
-    color:rgb(202, 198, 198);
-    font-size: small;
-    position: relative;
-}
-
-#contentHome li a::after{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background-color: #1db954;
-    color: transparent;
-    width: 0%;
-    content: "";
-    height: 3px;
-    transition: all 0.5s;    
-}
-
-#contentHome li a:hover::after{
-    width: 40%;
-}
-
-#contentHome li a:focus{
-    color:white;
-    border: none;
-}
-
-#contentHome li a:hover{
-    color:white;
-    border: none;
-}
-
-#contentHome .nav-tabs{
-    border: none;
-}
-
-#contentHome .nav-tabs .nav-item .active{
-    border: none;
-    background-color: transparent;
-}
-
-/* ============ Home content END ======================= */
