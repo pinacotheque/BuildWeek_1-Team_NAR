@@ -138,6 +138,7 @@ header img{
 }
 
 #loginButton {
+    display: flex;
     margin-right: 15px;
     /* font-size: 12px; */
     letter-spacing: 1px;
@@ -161,12 +162,12 @@ header img{
     
 }
 
-footer div>p>.Terms{
+.login-footer>p>.Terms{
     color: rgb(30, 202, 30)
 }
 
-footer div>p{
-    font-size: small;
+.login-footer>p{
+    font-size: 15px;
 }
 
 /*============= Rabia Side Bar  ============== */
@@ -634,4 +635,40 @@ td>a {
 }
 .col.duration{
     padding-right: 6rem;
+}
+
+
+
+input[type="checkbox"]{
+   appearance: none;
+   -webkit-appearance: none;
+   height: 20px;
+   width: 20px;
+   background-color: #a7a7a5;
+   border-radius: 5px;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  outline: none;
+  position: absolute;
+
+}
+input[type="checkbox"]::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content:"\f00c";
+    font-size: 18px;
+    color: white;
+    display: none;
+}
+input[type="checkbox"]:hover{
+    background-color: #5f5e5e;
+}
+input[type="checkbox"]:checked{
+    background-color: green;
+    
+}
+input[type="checkbox"]:checked::after{
+    display: flex;
 }
