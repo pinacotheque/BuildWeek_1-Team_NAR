@@ -147,7 +147,7 @@ header img{
 #personalDetails p{
     color: var(--greenFocus);
 }
-
+/* =====footer of login page Aizada==== */
 .spotify {
     border: 1px solid ;
     font-family: Helvetica, sans-serif;
@@ -596,7 +596,7 @@ footer {
 /*============= Rabia Artistpage END  ============== */
 
 /* ============ Content END ========================  */
-}
+
 /* h5  */
 .queen-II {
     color: white;
@@ -617,11 +617,7 @@ p.small{
     color: rgb(201, 199, 199);
 }
 
-/* navbar on the top */
-.navbar{
-    background-color: rgb(12, 10, 10);
-    height: 50px;
-}
+
 
 /* this is p inside the table */
 td>p {
@@ -633,4 +629,9 @@ td>p {
 /* inside table */
 td>a {
     color: rgb(236, 232, 232);
+
+    /* padding of third col of the table */
+}
+.col.duration{
+    padding-right: 6rem;
 }
