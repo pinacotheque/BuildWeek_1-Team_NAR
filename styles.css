@@ -679,7 +679,7 @@ td>a {
 /* ============ Nando HomePage Start ============= */
 
 #contentHome {
-    background: linear-gradient(135deg, rgba(38,66,103,1) 45%, rgba(19,19,19,1) 100%);
+    background: linear-gradient(135deg, rgba(38,66,103,1) 20%, rgba(19,19,19,1) 100%);
     padding-bottom: 200px;
 }
 
@@ -706,7 +706,8 @@ td>a {
 #deckHeader>div>h3 {
     padding-left: 15px;
     color: white;
-    font-size: 30px;
+    font-size: 2em;
+    font-weight: 700;
     letter-spacing: 2px;
 }
 
@@ -721,8 +722,8 @@ td>a {
 }
 /* card img  */
 #cardsDeck .card img {
-    border-radius: 1em;
-    padding: 15px;
+    /* border-radius: 5px; */
+    padding: 8px;
     padding-bottom: 0;
     /* z-index: 2; */
 }
@@ -765,9 +766,11 @@ td>a {
 
 
 #contentHome li a{
-    color:rgb(202, 198, 198);
-    font-size: small;
+    color:rgba(202, 198, 198, 0.73);
+    font-size: 12px;
     position: relative;
+    letter-spacing: 2px;
+    font-weight: lighter;
 }
 
 #contentHome li a::after{
@@ -785,7 +788,7 @@ td>a {
 }
 
 #contentHome li a:hover::after{
-    width: 40%;
+    width: 30%;
 }
 
 #contentHome li a:focus{
