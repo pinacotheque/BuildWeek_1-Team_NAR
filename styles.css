@@ -704,7 +704,7 @@ td>a {
 
 /* heading of cards section  */
 #deckHeader>div>h3 {
-    padding-left: 15px;
+    padding-left: 56px;
     color: white;
     font-size: 2em;
     font-weight: 700;
@@ -809,4 +809,32 @@ td>a {
     border: none;
     background-color: transparent;
 }
+
+@media screen and (max-width: 650px) {
+    #deckHeader {
+        padding: 0px;
+    }
+    #deckHeader>div>h3 {
+        font-size: 1.5em;
+        padding-left: 0px !important;
+        /* padding-right: 0px; */
+    }
+    
+}
+
+@media screen and (max-width: 550px) {
+    #deckHeader>div>h3 {
+        font-size: 1em;
+        letter-spacing: 0px;
+    }
+}    
+/* 
+@media screen and (max-width: 450px) {
+    #deckHeader>div>h3 {
+        font-size: 0.8em;
+        letter-spacing: 0px;
+    }
+}     */
+   
+
 /* ============ Nando HomePage END ============= */
