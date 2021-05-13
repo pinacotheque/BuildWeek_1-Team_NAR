@@ -170,7 +170,8 @@ header img{
     /* padding-right: 15px; */
     /* font-size: 12px; */
     letter-spacing: 1px;
-    padding: 1em 6em;
+    margin: 5px 0px;
+    padding: 0.5em 6em;
 }
 
 #personalDetails p{
