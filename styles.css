@@ -19,8 +19,8 @@ header img{
 
 :root {
     /* spotify standard green */
-    --green: rgb(21, 136, 62);  
-    --greenFocus: rgb(26, 187, 91);   
+    --green: rgb(26, 187, 21);  
+    --greenFocus: rgb(26, 176, 24);   
 }
 /*============= Rabia Social Buttons  ============== */
 
@@ -109,6 +109,35 @@ header img{
 #personalDetails input[type="checkbox"]:active{
     background-color: yellow;
 } */
+#tick {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    color: white;
+    z-index: 5;
+}
+#exampleCheck1 {
+    height: 25px;
+    width: 25px;
+    appearance: none;
+    border: 1px solid #34495E;
+    border-radius: 4px;
+    /* transition-duration: 0.2s; */
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+}
+#tick:hover {
+    cursor: pointer;
+}
+.form-check-label:hover {
+    cursor: pointer;
+}
+
+#exampleCheck1:checked {
+    border: 1px solid #41B883;
+    background-color: var(--greenFocus);
+} 
+
 
 .btn-primary {
     background-color: var(--green);
@@ -138,10 +167,11 @@ header img{
 }
 
 #loginButton {
-    margin-right: 15px;
+    /* padding-right: 15px; */
     /* font-size: 12px; */
     letter-spacing: 1px;
-    padding: 1em 6em;
+    margin: 5px 0px;
+    padding: 12px 96px 4px;
 }
 
 #personalDetails p{
