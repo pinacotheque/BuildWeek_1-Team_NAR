@@ -756,12 +756,16 @@ input{
     margin-bottom: 500px;
 }
 
+#deckHeader {
+    z-index: 1;
+}
+/* 
 @media (min-width: 576px){ 
 #contentArtist .card-deck{
     margin-left:0px;
     margin-right: 0px;
 }
-} 
+}  */
 
 
 /*============= Rabia Artistpage END  ============== */
