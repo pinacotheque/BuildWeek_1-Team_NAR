@@ -279,6 +279,11 @@ footer div>p{
 
 #menu .sideBottom{
     color: #B1B1B1;
+    padding-bottom: 60%;
+}
+
+#menu .artist-bottom{
+    padding-bottom: 130%;
 }
 
 #menu .sideBottom a{
@@ -327,6 +332,14 @@ footer div>p{
   .smalltab svg{
     color: #B1B1B1;
   }
+
+  @media screen and (max-width: 1200px){
+    .smalltab .small-sidebar img{
+      max-width: 60%;
+      max-height: 100%;
+    }
+}
+
 
 /*============= Rabia small screen Side Bar END============== */
 
@@ -1046,8 +1059,7 @@ z-index:2;
     border-style: solid;
     border-width: 7px 0 7px 10px;
     border-color: transparent transparent transparent white;
-
-
+    background-color: transparent;
 }
 
 #contentHome li a{
