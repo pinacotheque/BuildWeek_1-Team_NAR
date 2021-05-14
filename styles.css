@@ -983,7 +983,7 @@ z-index:2;
     /* z-index: 2; */
 }
 
-#cardsDeck .card :hover::after{
+.artist-cards .card :hover::after{
     content: "";
     position: absolute;
     top: 0;
