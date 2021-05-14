@@ -31,15 +31,15 @@
     <div class="container-fluid">
       <main>
         <div class="row ">
-          <div id="menu" class="col-12 d-none col-md-2 d-md-flex flex-column justify-content-between">
+          <div id="menu" class="col-12 d-none d-lg-none col-xl-2 d-xl-flex flex-column justify-content-between">
             <div>
               <a href="home.html"
                 ><img
-                  class="img-fluid text-center mb-2"
+                  class="img-fluid text-center mb-2 pr-5"
                   src="sideassets/spotify_black.png"
                   alt=""
               /></a>
-              <ul class="pl-4">
+              <ul class="pl-2">
                 <li>
                     <svg viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z" fill="currentColor"></path></svg>
                   <a class="pl-3" href="home.html">Home</a>
@@ -55,7 +55,7 @@
               </ul>
             </div>
 
-            <div class="sideBottom mb-4">
+            <div class="sideBottom artist-bottom mb-4">
               <div class="container mb-5 pb-5">
                 <div class="ml-2">
                   <svg
@@ -88,7 +88,10 @@
 
           <!-- Sidebar end -->
 
-          <div id="contentArtist" class="col-12 col-md-10 mb-5">
+          <div id="contentArtist" class="col-12 col-xl-10 mb-5">
+          <!-- new content  -->
+    
+
             <div class="container">
 
                 <!-- Upper body -->
@@ -96,13 +99,25 @@
                     <div class="d-flex flex-column text-center z-index:2">
                         <p>33,000,575 MONTHLY LISTENERS</p>
                         <h1><strong>Queen</strong></h1>
-                        <div class="d-flex flex-row text-center mt-3">
-                            <button type="button" class="btn badge-pill btn-primary playbtn">PLAY</button>
-                            <button type="button" class="btn badge-pill btn-secondary follow mx-3">FOLLOW</button> 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" class="bi bi-three-dots" viewBox="0 0 16 16">
+                        <div class="d-md-flex flex-row text-center mt-3 d-none ">
+                            <button type="button" class=" btn badge-pill btn-primary playbtn">PLAY</button>
+                            <button type="button" class=" btn badge-pill btn-secondary follow mx-3">FOLLOW</button>
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="50" height="50" class="bi bi-three-dots " viewBox="0 0 16 16">
                                 <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
                               </svg>                  
                         </div>
+
+                        
+                          <div class="row text-center mt-3 justify-content-center d-block d-md-none" style="z-index: 10;">
+                            <div class="col-12">
+                              <button type="button" class="btn btn-primary btn-lg btn-block smallPlaybtn badge-pill">Play</button>
+                            </div> 
+                            <div class="col-12 mt-4">
+                              <button type="button" class="btn btn-primary btn-lg btn-block smallfollow badge-pill">Follow</button>
+                            </div>
+                          </div>
+                          
+                       
                         <div class="mt-4 pt-4" style="z-index:1;">
                             <ul class="nav nav-tabs">
                                 <li class="nav-item">
@@ -119,22 +134,22 @@
                     </div>               
                 </div>
                 <!-- Upper body end -->
-
+            </div>
                 <!-- CARDS -->
-                <div class="row mt-3 artistCards">
-                    <h2 class="text-left mb-3"><strong>Albums</strong></h2>
+                <!-- <div class="row mt-3 artistCards"> -->
+                    <!-- <h2 class="text-left mb-3"><strong>Albums</strong></h2> -->
                     <!-- ROW 1 -->
-                    <div class="row mb-4">
+                    <!-- <div class="row mb-4">
                       <div class="card-deck">
-                        <div class="card text-center">
-                          <img src="https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/e3/fd/ec/e3fdecc8-2dd2-0cea-1c8e-8dce7212c0f0/dj.dthoguko.jpg/1000x1000bb.webp" class="img-fluid" alt="...">
+                        <div class="card text-center p-md-b-5">
+                          <a href="album.html"><img src="https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/e3/fd/ec/e3fdecc8-2dd2-0cea-1c8e-8dce7212c0f0/dj.dthoguko.jpg/1000x1000bb.webp" class="img-fluid" alt="..."></a>
                           <div class="card-body">
                             <p class="card-text text-white mb-0 mt-1">Bohemian Rhapsody(The Original Soundtrack)</p>
                             <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
                           </div>
                         </div>
                         <div class="card text-center">
-                          <img src="https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/e5/d2/c7/e5d2c745-fc76-db1a-ad09-58c57414d7b4/00602537700417.rgb.jpg/1000x1000bb.webp" class="img-fluid" alt="...">
+                          <a href="album.html"><img src="https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/e5/d2/c7/e5d2c745-fc76-db1a-ad09-58c57414d7b4/00602537700417.rgb.jpg/1000x1000bb.webp" class="img-fluid" alt="..."></a>
                           <div class="card-body">
                           
                             <p class="card-text text-white mb-0 mt-1">Bohemian Rhapsody(The Original Soundtrack)</p>
@@ -142,7 +157,7 @@
                           </div>
                         </div>
                         <div class="card text-center">
-                          <img src="https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/4c/86/1d/4c861dab-5428-f3b7-8068-82bb69db5e89/093624932130.jpg/1000x1000bb.webp" class="img-fluid" alt="...">
+                          <a href="album.html"><img src="https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/4c/86/1d/4c861dab-5428-f3b7-8068-82bb69db5e89/093624932130.jpg/1000x1000bb.webp" class="img-fluid" alt="..."></a>
                           <div class="card-body">
                             
                             <p class="card-text text-white mb-0 mt-1">Bohemian Rhapsody(The Original Soundtrack)</p>
@@ -150,7 +165,15 @@
                           </div>
                         </div>
                         <div class="card text-center">
-                          <img src="https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/4c/86/1d/4c861dab-5428-f3b7-8068-82bb69db5e89/093624932130.jpg/1000x1000bb.webp" class="img-fluid" alt="...">
+                          <a href="album.html"><img src="https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/4c/86/1d/4c861dab-5428-f3b7-8068-82bb69db5e89/093624932130.jpg/1000x1000bb.webp" class="img-fluid" alt="...">
+                            <div class="card-body"></a>
+                            
+                            <p class="card-text text-white mb-0 mt-1">Bohemian Rhapsody(The Original Soundtrack)</p>
+                            <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
+                          </div>
+                        </div>
+                        <div class="card text-center">
+                          <a href="album.html"><img src="https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/4c/86/1d/4c861dab-5428-f3b7-8068-82bb69db5e89/093624932130.jpg/1000x1000bb.webp" class="img-fluid" alt="..."></a>
                           <div class="card-body">
                             
                             <p class="card-text text-white mb-0 mt-1">Bohemian Rhapsody(The Original Soundtrack)</p>
@@ -158,15 +181,7 @@
                           </div>
                         </div>
                         <div class="card text-center">
-                          <img src="https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/4c/86/1d/4c861dab-5428-f3b7-8068-82bb69db5e89/093624932130.jpg/1000x1000bb.webp" class="img-fluid" alt="...">
-                          <div class="card-body">
-                            
-                            <p class="card-text text-white mb-0 mt-1">Bohemian Rhapsody(The Original Soundtrack)</p>
-                            <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
-                          </div>
-                        </div>
-                        <div class="card text-center">
-                          <img src="https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/4c/86/1d/4c861dab-5428-f3b7-8068-82bb69db5e89/093624932130.jpg/1000x1000bb.webp" class="img-fluid" alt="...">
+                          <a href="album.html"><img src="https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/4c/86/1d/4c861dab-5428-f3b7-8068-82bb69db5e89/093624932130.jpg/1000x1000bb.webp" class="img-fluid" alt="..."></a>
                           <div class="card-body">
                             
                             <p class="card-text text-white mb-0 mt-1">Bohemian Rhapsody(The Original Soundtrack)</p>
@@ -174,66 +189,241 @@
                           </div>
                         </div>
                       </div>
-                    </div>  
-                    <!-- ROW 1 ends --> 
-                    
-                    <!-- ROW 2 -->
-                    <div class="row mb-5 pb-5 row2">
-                      <div class="card-deck">
-                        <div class="card text-center">
-                          <img src="https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/e3/fd/ec/e3fdecc8-2dd2-0cea-1c8e-8dce7212c0f0/dj.dthoguko.jpg/1000x1000bb.webp" class="img-fluid" alt="...">
-                          <div class="card-body">
-                            <p class="card-text text-white mb-0 mt-1">Bohemian Rhapsody(The Original Soundtrack)</p>
-                            <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
+                    </div>   -->
+                  <section id="cardsDeck" class="artist-cards">
+                    <div class="row mx-5">
+                      <div id="deckHeader" class="row w-100">
+                        <div class="mt-4 mb-1">
+                            <h3>Albums</h3>
+                            <!-- <span>Description for this deck of cards / section of music</span> -->
+                        </div>
+                        <!-- <div class="d-flex align-items-center ml-auto">
+                            <span>SEE ALL</span>
+                        </div> -->
+                      </div>
+                      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-6 px-5">
+                        <div class="col px-0 mb-4">
+                          <div class="card h-100">
+                            <a href="album.html">
+                              <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUaqRn8ruIVbKenwXKFX7a9KQKRLRuQRpS-GsHIyY6qrICzKjlifRmFEC_fj8FGC0sPLs&usqp=CAU class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-play"></div>
+                            <!-- <i class="fab fa-spotify"></i> -->
+                            <div class="card-body text-center p-3">
+                              <p class="card-text text-white mb-0 mt-1">Bohemian Rhapsody(The Original Soundtrack)</p>
+                              <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
+                            </div>
                           </div>
                         </div>
-                        <div class="card text-center">
-                          <img src="https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/e5/d2/c7/e5d2c745-fc76-db1a-ad09-58c57414d7b4/00602537700417.rgb.jpg/1000x1000bb.webp" class="img-fluid" alt="...">
-                          <div class="card-body">
-                          
-                            <p class="card-text text-white mb-0 mt-1">Bohemian Rhapsody(The Original Soundtrack)</p>
-                            <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
+                        <div class="col px-0 mb-4">
+                          <div class="card h-100">
+                            <a href="album.html">
+                              <img src=https://bravewords.com/medias-static/images/news/2016%20II/queenonair1.jpg class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-play"></div>  
+                            <!-- <i class="fab fa-spotify"></i> -->
+                            <div class="card-body text-center p-3">
+                              <p class="card-text text-white mb-0 mt-1">On Air</p>
+                              <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
+                            </div>
                           </div>
                         </div>
-                        <div class="card text-center">
-                          <img src="https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/4c/86/1d/4c861dab-5428-f3b7-8068-82bb69db5e89/093624932130.jpg/1000x1000bb.webp" class="img-fluid" alt="...">
-                          <div class="card-body">
-                            
-                            <p class="card-text text-white mb-0 mt-1">Bohemian Rhapsody(The Original Soundtrack)</p>
-                            <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
+                        <div class="col px-0 mb-4">
+                          <div class="card h-100">
+                            <a href="album.html">
+                              <img src=https://img.discogs.com/h-NVa4igX-riZjnzVFugzXxiRIo=/fit-in/600x591/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-7739371-1483370708-1554.jpeg.jpg class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-play"></div>  
+                            <!-- <i class="fab fa-spotify"></i> -->
+                            <div class="card-body text-center p-3">
+                              <p class="card-text text-white mb-0 mt-1">A Nigth At The Odeon</p>
+                              <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
+                            </div>
                           </div>
                         </div>
-                        <div class="card text-center">
-                          <img src="https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/4c/86/1d/4c861dab-5428-f3b7-8068-82bb69db5e89/093624932130.jpg/1000x1000bb.webp" class="img-fluid" alt="...">
-                          <div class="card-body">
-                            
-                            <p class="card-text text-white mb-0 mt-1">Bohemian Rhapsody(The Original Soundtrack)</p>
-                            <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
+                        <div class="col px-0 mb-4">
+                          <div class="card h-100">
+                            <a href="album.html">
+                              <img src=https://upload.wikimedia.org/wikipedia/en/2/2d/Live_at_the_Rainbow_%2774.jpg class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-play"></div>  
+                            <!-- <i class="fab fa-spotify"></i> -->
+                            <div class="card-body text-center p-3">
+                              <p class="card-text text-white mb-0 mt-1">Live At The Rainbow</p>
+                              <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
+                            </div>
                           </div>
                         </div>
-                        <div class="card text-center">
-                          <img src="https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/4c/86/1d/4c861dab-5428-f3b7-8068-82bb69db5e89/093624932130.jpg/1000x1000bb.webp" class="img-fluid" alt="...">
-                          <div class="card-body">
-                            
-                            <p class="card-text text-white mb-0 mt-1">Bohemian Rhapsody(The Original Soundtrack)</p>
-                            <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
+                        <div class="col px-0 mb-4">
+                          <div class="card h-100">
+                            <a href="album.html">
+                              <img src=https://upload.wikimedia.org/wikipedia/en/2/2d/Live_at_the_Rainbow_%2774.jpg class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-play"></div>  
+                            <!-- <i class="fab fa-spotify"></i> -->
+                            <div class="card-body text-center p-3">
+                              <p class="card-text text-white mb-0 mt-1">Live At The Rainbow (Deluxe)</p>
+                              <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
+                            </div>
                           </div>
                         </div>
-                        <div class="card text-center">
-                          <img src="https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/4c/86/1d/4c861dab-5428-f3b7-8068-82bb69db5e89/093624932130.jpg/1000x1000bb.webp" class="img-fluid" alt="...">
-                          <div class="card-body">
-                            
-                            <p class="card-text text-white mb-0 mt-1">Bohemian Rhapsody(The Original Soundtrack)</p>
-                            <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
+                        <div class="col px-0 mb-4">
+                          <div class="card h-100">
+                            <a href="album.html">
+                              <img src=
+                              https://lh3.googleusercontent.com/proxy/hxTl6g3s9QMV8ecMCowSQW8YhB1Fmq7gPkkUKB_nWVDnT1zhuJ-HlejxTLlzB1BGiCq3-UZ0UloHyPVarmL2lr7aZSWjCYdfgfKPW1I8notklb7iJHw5fCOk0LsvQ7hDCMRl1wktfttdHlMFNKm3CLmwXy7R class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-play"></div>  
+                            <!-- <i class="fab fa-spotify"></i> -->
+                            <div class="card-body text-center p-3">
+                              <p class="card-text text-white mb-0 mt-1">Hungarian Rhapsody (Live in Budapest/1986)</p>
+                              <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col px-0 mb-4">
+                          <div class="card h-100">
+                            <a href="album.html">
+                              <img src=https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Queen_The_Cosmos_Rocks_Album_Cover.jpg/220px-Queen_The_Cosmos_Rocks_Album_Cover.jpg class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-play"></div>  
+                            <!-- <i class="fab fa-spotify"></i> -->
+                            <div class="card-body text-center p-3">
+                              <p class="card-text text-white mb-0 mt-1">Paul Rodgers</p>
+                              <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col px-0 mb-4">
+                          <div class="card h-100">
+                            <a href="album.html">
+                              <img src=https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRK7LeHFWl0atUUd1nHO-yyTRQpFxGSMK9AKnmhtg-TARBnJ0Li6wlK0Q6jhM9YMvpYcd17R9k1038avn3t5S0TVDyyNRBl1kkpo4rDfvP0mMEu1VLNr2H5EeM8-TI&usqp=CAE class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-play"></div>  
+                            <!-- <i class="fab fa-spotify"></i> -->
+                            <div class="card-body text-center p-3">
+                              <p class="card-text text-white mb-0 mt-1">Greatest Hits II</p>
+                              <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col px-0 mb-4">
+                          <div class="card h-100">
+                            <a href="album.html">
+                              <img src=https://upload.wikimedia.org/wikipedia/en/a/a1/Returnofthechampions.jpg class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-play"></div>  
+                            <!-- <i class="fab fa-spotify"></i> -->
+                            <div class="card-body text-center p-3">
+                              <p class="card-text text-white mb-0 mt-1">Return Of The Champions</p>
+                              <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col px-0 mb-4">
+                          <div class="card h-100">
+                            <a href="album.html">
+                              <img src=https://m.media-amazon.com/images/I/81jx9KYIe0L._SS500_.jpg class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-play"></div>  
+                            <!-- <i class="fab fa-spotify"></i> -->
+                            <div class="card-body text-center p-3">
+                              <p class="card-text text-white mb-0 mt-1">On Fire (Live At The Bowl)</p>
+                              <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col px-0 mb-4">
+                          <div class="card h-100">
+                            <a href="album.html">
+                              <img src=http://2.bp.blogspot.com/-W1nK1BnpQm8/Td2ZUZDUsAI/AAAAAAAABi0/SrcHk1yy4DM/s1600/Queen+-+Made+in+Heaven.jpg class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-play"></div>  
+                            <!-- <i class="fab fa-spotify"></i> -->
+                            <div class="card-body text-center p-3">
+                              <p class="card-text text-white mb-0 mt-1">Made in Heaven</p>
+                              <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col px-0 mb-4">
+                          <div class="card h-100">
+                            <a href="album.html">
+                              <img src=https://www.udiscovermusic.com/wp-content/uploads/2019/05/Queen-Hot-Space-album-cover-820.jpg class="card-img-top" alt="...">
+                            </a>
+                            <div class="card-play"></div>  
+                            <!-- <i class="fab fa-spotify"></i> -->
+                            <div class="card-body text-center p-3">
+                              <p class="card-text text-white mb-0 mt-1">Hot Space</p>
+                              <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
+                  </section>
+                    <!-- ROW 1 ends --> 
+                    
+                    <!-- ROW 2 -->
+                    <!-- <div class="row mb-5 pb-5 row2">
+                      <div class="card-deck">
+                        <div class="card text-center">
+                          <img src="https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/e3/fd/ec/e3fdecc8-2dd2-0cea-1c8e-8dce7212c0f0/dj.dthoguko.jpg/1000x1000bb.webp" class="img-fluid" alt="...">
+                          <div class="card-body">
+                            <p class="card-text text-white mb-0 mt-1">Bohemian Rhapsody(The Original Soundtrack)</p>
+                            <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
+                          </div>
+                        </div>
+                        <div class="card text-center">
+                          <img src="https://is4-ssl.mzstatic.com/image/thumb/Music114/v4/e5/d2/c7/e5d2c745-fc76-db1a-ad09-58c57414d7b4/00602537700417.rgb.jpg/1000x1000bb.webp" class="img-fluid" alt="...">
+                          <div class="card-body">
+                          
+                            <p class="card-text text-white mb-0 mt-1">Bohemian Rhapsody(The Original Soundtrack)</p>
+                            <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
+                          </div>
+                        </div>
+                        <div class="card text-center">
+                          <img src="https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/4c/86/1d/4c861dab-5428-f3b7-8068-82bb69db5e89/093624932130.jpg/1000x1000bb.webp" class="img-fluid" alt="...">
+                          <div class="card-body">
+                            
+                            <p class="card-text text-white mb-0 mt-1">Bohemian Rhapsody(The Original Soundtrack)</p>
+                            <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
+                          </div>
+                        </div>
+                        <div class="card text-center">
+                          <img src="https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/4c/86/1d/4c861dab-5428-f3b7-8068-82bb69db5e89/093624932130.jpg/1000x1000bb.webp" class="img-fluid" alt="...">
+                          <div class="card-body">
+                            
+                            <p class="card-text text-white mb-0 mt-1">Bohemian Rhapsody(The Original Soundtrack)</p>
+                            <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
+                          </div>
+                        </div>
+                        <div class="card text-center">
+                          <img src="https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/4c/86/1d/4c861dab-5428-f3b7-8068-82bb69db5e89/093624932130.jpg/1000x1000bb.webp" class="img-fluid" alt="...">
+                          <div class="card-body">
+                            
+                            <p class="card-text text-white mb-0 mt-1">Bohemian Rhapsody(The Original Soundtrack)</p>
+                            <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
+                          </div>
+                        </div>
+                        <div class="card text-center">
+                          <img src="https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/4c/86/1d/4c861dab-5428-f3b7-8068-82bb69db5e89/093624932130.jpg/1000x1000bb.webp" class="img-fluid" alt="...">
+                          <div class="card-body">
+                            
+                            <p class="card-text text-white mb-0 mt-1">Bohemian Rhapsody(The Original Soundtrack)</p>
+                            <p class="card-text text-muted"><small class="text-muted"><strong>Queen</strong></small></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div> -->
                     <!-- ROW 2 ends -->
-                </div>
+                <!-- </div> -->
                 <!-- CARDS END-->
-            </div>
+            
           </div>
+
+          
         </div>
       </main>
 
@@ -248,7 +438,7 @@
 
       <!-- Audio end -->
 
-      <footer class="d-none d-md-block row fixed-bottom">
+      <footer class="d-none d-md-block row">
         <div
           id="player"
           class="container-fluid mt-3 text-center position-relative"
@@ -381,16 +571,16 @@
 
     <!-- Side bar for small screen -->
 
-    <div class="d-block d-md-none smalltab">
+    <div class="d-block d-xl-none smalltab">
       <div class="collapse" id="navbarToggleExternalContent">
-        <div class="row p-4 mb-5">
-          <div class="col-6">
-            <a href=""><img class="img-fluid text-center mb-2" src="spotify_black.png" alt=""/></a>
+        <div class="row p-sm-t-4 p-md-t-2 mb-5 pb-5 small-sidebar">
+          <div class="col-6 col-md-3">
+            <a href="home.html"><img class="img-fluid text-center mb-2 pt-3" src="spotify_black.png" alt=""/></a>
           </div>
-          <div class="col-6">
-            <a href="home.html"><h5 class="text-white small">Home</h5></a>
-            <a  href=""><h5 class="text-white small my-3">Search</h5></a>
-            <a href=""><h5 class="text-white small">Your Library</h5></a>
+          <div class="col-6 col-md-9 d-md-flex flex-row justify-content-between align-items-center">
+            <a href="home.html"><h5 class="text-white medium pt-2">Home</h5></a>
+            <a  href=""><h5 class="text-white medium m-sm-y-3 pt-2">Search</h5></a>
+            <a href=""><h5 class="text-white medium pt-2 mr-5">Your Library</h5></a>
           </div>         
         </div>
       </div>

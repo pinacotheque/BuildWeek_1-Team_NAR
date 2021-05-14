@@ -18,15 +18,15 @@
   <div class="container-fluid">
     <main>
       <div class="row">
-        <div id="menu" class="col-12 d-none col-md-2 d-md-flex flex-column justify-content-between">
+        <div id="menu" class="col-12 d-none d-lg-none col-xl-2 d-xl-flex flex-column justify-content-between">
           <div>
             <a href="home.html"
               ><img
-                class="img-fluid text-center mb-2"
+                class="img-fluid text-center mb-2 pr-5"
                 src="sideassets/spotify_black.png"
                 alt=""
             /></a>
-            <ul class="pl-4">
+            <ul class="pl-2">
               <li>
                   <svg viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z" fill="currentColor"></path></svg>
                 <a class="pl-3" href="home.html">Home</a>
@@ -74,27 +74,24 @@
         </div>
 
         <!-- content start  -->
-        <div id="content" class="col-12 col-md-10 pb-0 ">
+        <div id="content" class="col-12 col-xl-10 pb-0 ">
           <div class="container">
             <div class="row">
               <!-- first col for img and text -->
-              <div class="col-4 p-0 mt-5 ">
+              <div class="col-12 col-sm-12 col-md-4 p-0 mt-5 ">
                 
 
                 <div class="d-flex align-center justify-content-center">
-                  <img id="queen" class="w-60 img-fluid"
+                  <a href="artist.html"><img id="queen" class="w-60 img-fluid"
                     src="https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Queen_II_%28album_cover%29.jpg/220px-Queen_II_%28album_cover%29.jpg"
-                    class="  d-block float-end" alt="...">
+                    class="  d-block float-end" alt="..."></a>
                   </div>
                   <h5 class="queen-II text-center mt-2">(Queen II Deluxe Edition <br> 2011 Remaster)</h5>
                   <p class="small text-center mt-1">Queen</p>
                   <div class="text-center"
                   >
-                    <button type="button" class="btn badge-pill btn-success btn-sm  my-2 px-4">PLAY</button></div>
+                    <button type="button" class="btn badge-pill btn-success btn-sm myBtn">PLAY</button></div>
                   <p class="small text-center  ">1974 . 16 SONGS</p>
-
-
-
                  <div class="text-center"> <i class="far fa-heart extra mr-2"></i>
                   <i class="fas fa-ellipsis-h extra "></i>
                  </div>
@@ -104,7 +101,7 @@
               <!-- end of first col -->
 
               <!-- start second col with table -->
-              <div class="col-8 mt-4 p-0">
+              <div id="albumList" class="col-12 col-sm-12 col-md-8 mt-4  ">
                 <table class="table table-borderless ">
 
                   <tbody id="music-album">
@@ -287,7 +284,7 @@
       <!-- Audio end -->
 
     <!-- start footer -->
-    <footer class="d-none d-md-block row fixed-bottom">
+    <footer class="d-none d-md-block row">
       <div
         id="player"
         class="container-fluid mt-3 text-center position-relative"
@@ -420,16 +417,16 @@
 
    <!-- Side bar for small screen -->
 
-   <div class="d-block d-md-none smalltab">
+   <div class="d-block d-xl-none smalltab">
     <div class="collapse" id="navbarToggleExternalContent">
-      <div class="row p-4 mb-5">
-        <div class="col-6">
-          <a href=""><img class="img-fluid text-center mb-2" src="spotify_black.png" alt=""/></a>
+      <div class="row p-sm-t-4 p-md-t-2 mb-5 pb-5 small-sidebar">
+        <div class="col-6 col-md-3">
+          <a href="home.html"><img class="img-fluid text-center mb-2 pt-3" src="spotify_black.png" alt=""/></a>
         </div>
-        <div class="col-6">
-          <a href="home.html"><h5 class="text-white small">Home</h5></a>
-          <a  href=""><h5 class="text-white small my-3">Search</h5></a>
-          <a href=""><h5 class="text-white small">Your Library</h5></a>
+        <div class="col-6 col-md-9 d-md-flex flex-row justify-content-between align-items-center">
+          <a href="home.html"><h5 class="text-white medium pt-2">Home</h5></a>
+          <a  href=""><h5 class="text-white medium m-sm-y-3 pt-2">Search</h5></a>
+          <a href=""><h5 class="text-white medium pt-2 mr-5">Your Library</h5></a>
         </div>         
       </div>
     </div>
