@@ -309,11 +309,34 @@ footer div>p{
 
 /*============= Rabia Side Bar  END============== */
 
+/*============= Rabia small screen Side Bar============== */
+
+.smalltab a{
+    text-decoration: none;
+  }
+  
+  .smalltab {
+    background-color: black!important;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+  }
+  
+  .smalltab svg{
+    color: #B1B1B1;
+  }
+
+/*============= Rabia small screen Side Bar END============== */
+
+
+
 /*============= Rabia footer  ============== */
 
 footer {
     background-color: #2c2c2c;
-    min-height: 13vh;
+    min-height: 10vh;
   /*   z-index: 10; */
 }
 
@@ -355,9 +378,12 @@ footer {
     transition: opacity .2s;
 }
 
+input{
+    margin: 5px;
+}
+
 .slider:hover {
     opacity: 1;
-
   }
 
   .slider::-webkit-slider-thumb {
@@ -384,9 +410,81 @@ footer {
     color: white;
     line-height: 2px;
 }
-  
+
+#seek-slider{
+    -webkit-appearance: none;  
+    appearance: none;
+    height: 3px;
+    background: #d3d3d3; 
+    outline: none; 
+    width: 70%;
+    opacity: 0.7; 
+    -webkit-transition: .2s; 
+    transition: opacity .2s;
+}
+
+#seek-slider:hover {
+    opacity: 1;
+  }
+
+#seek-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    cursor: pointer; 
+  }
 
 /*============= Rabia footer END  ============== */
+/*============= Rabia small screen footer ============== */
+
+
+#smallFooter {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 50px;
+    z-index: 100;
+  }
+
+  #smallFooter .navbar{
+    background-color: #2c2c2c!important;
+    height: 60px;
+    padding: 0.5rem 0.4rem;
+  
+  }
+
+  #smallFooter img{
+    width: 60px;
+    height: 50px;
+  }
+
+  #smallFooter svg{
+      z-index: 100;
+      color: grey;
+  }
+
+  #smallFooter svg:hover{
+    z-index: 100;
+    color: white;
+}
+
+  #smallFooter i{
+      z-index: 100;
+      color: grey;
+  }
+
+  #smallFooter i:hover{
+    z-index: 100;
+    color: rgb(255, 255, 255);
+}
+
+#smallFooter .pause{
+    
+    position:absolute;
+    right: 59%;
+    transform: translateX(27px);
+}
+
+  /*============= Rabia small screenfooter END  ============== */
 
 
 /* ======================================  */
@@ -547,7 +645,8 @@ footer {
 #contentArtist .playbtn{  
     letter-spacing: 0px;
     padding: 0em 4em;
-    z-index: 1;    
+    z-index: 1;  
+    margin: 5px;  
 }
 
 #contentArtist .playbtn:hover{  
@@ -558,7 +657,8 @@ footer {
     z-index: 1;  
     letter-spacing: 0px;
     padding: 0em 3em;
-    background-color: rgba(0,0,0,0.5);    
+    background-color: rgba(0,0,0,0.5); 
+    margin: 5px;   
 }
 
 #contentArtist .follow:hover{  
@@ -703,6 +803,25 @@ td>p {
 /* inside table */
 td>a {
     color: rgb(236, 232, 232);
+    text-decoration: none;
+}
+
+td>a:hover {
+    color: grey;
+    text-decoration: none;
+}
+
+.table td{
+transform: translateX(0px);  
+transition: 1s all;
+}
+
+
+.table td:hover{
+background-color: rgb(49, 44, 44);
+box-shadow: 2px 0 20px 2px rgba(20, 20, 20,0.5);
+transform: scale(1.03);
+z-index:2;
 }
 /* ============ Aizada Album END ================= */
 
@@ -846,7 +965,7 @@ td>a {
     }
     #deckHeader>div>h3 {
         font-size: 1.5em;
-        padding-left: 0px !important;
+        /* padding-left: 0px !important; */
         /* padding-right: 0px; */
     }
     
