@@ -865,11 +865,11 @@ p.small{
     color: rgb(201, 199, 199);
 }
 
-/* navbar on the top */
-.navbar{
-    background-color: rgb(12, 10, 10);
-    height: 78px;
+/* id of table  */
+#albumList{
+    padding: 0 0 10rem 0;
 }
+
 
 /* this is p inside the table */
 td>p {
