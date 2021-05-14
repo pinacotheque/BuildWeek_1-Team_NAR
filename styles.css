@@ -649,6 +649,21 @@ input{
     margin: 5px;  
 }
 
+#contentArtist .smallPlaybtn{  
+    letter-spacing: 0px;
+    padding: 0em 4em;
+    z-index: 100;  
+    margin: 5px; 
+    padding: 3% 0;  
+    background-color: #1db954; 
+    border-color: transparent;
+}
+
+#contentArtist .smallPlaybtn:hover{  
+    background-color: #116b30d3; 
+}
+
+
 #contentArtist .playbtn:hover{  
   background-color: #1db954;   
 }
@@ -658,7 +673,22 @@ input{
     letter-spacing: 0px;
     padding: 0em 3em;
     background-color: rgba(0,0,0,0.5); 
-    margin: 5px;   
+    margin: 5px; 
+    width: 100%;  
+}
+
+#contentArtist .smallfollow{
+    z-index: 5;  
+    letter-spacing: 0px;
+    padding: 0em 3em;
+    background-color: rgba(0,0,0,0.2);
+    margin: 5px; 
+   border-color: grey; 
+    padding: 3% 0; 
+}
+
+#contentArtist .smallfollow:hover{
+    background-color: rgba(0,0,0,0.7); 
 }
 
 #contentArtist .follow:hover{  
