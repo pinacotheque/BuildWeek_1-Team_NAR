@@ -30,10 +30,10 @@
   <body>
     <div class="container-fluid">
       <main>
-        <div class="row">
-          <div id="menu" class="col-12 col-md-2 d-flex flex-column justify-content-between">
+        <div class="row ">
+          <div id="menu" class="col-12 d-none col-md-2 d-md-flex flex-column justify-content-between">
             <div>
-              <a href=""
+              <a href="home.html"
                 ><img
                   class="img-fluid text-center mb-2"
                   src="sideassets/spotify_black.png"
@@ -42,7 +42,7 @@
               <ul class="pl-4">
                 <li>
                     <svg viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z" fill="currentColor"></path></svg>
-                  <a class="pl-3" href="">Home</a>
+                  <a class="pl-3" href="home.html">Home</a>
                 </li>
                 <li class="my-4">
                     <svg viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z" fill="currentColor" fill-rule="evenodd"></path></svg>
@@ -248,7 +248,7 @@
 
       <!-- Audio end -->
 
-      <footer class="row fixed-bottom">
+      <footer class="d-none d-md-block row fixed-bottom">
         <div
           id="player"
           class="container-fluid mt-3 text-center position-relative"
@@ -256,7 +256,7 @@
 
           <div class="row row-cols-1 row-cols-md-3 no-gutters">
             
-                  <div class="col-12 d-flex justify-content-center py-2">
+                  <div class="col-12 d-flex py-2 pl-4">
                       <img src="footerassets/michael-jackson-smooth-criminal.jpg" class="img-fluid" alt="">
                       <div class="flex-column pl-3 text-left mt-3 footerp">
                       <p><strong>My Favourite Song</strong></p>            
@@ -341,12 +341,14 @@
                       />
                     </svg>
                     <div class="row justify-content-center text-muted">
-                      <div class="col-8">
-                        <hr class="playhr" />
+                      <div class="col-12">
+                        <span id="current-time" class="time">0:00</span>
+                        <input type="range" id="seek-slider" max="100" value="0">
+                         <span id="duration" class="time">0:00</span>
                       </div>
                     </div>
                   </div>
-                  <div class="col-12  mt-3 pb-4">
+                  <div class="col-12 mt-3 pb-4">
                     <i class="fas fa-align-justify pr-3"></i>
                     <i class="fas fa-desktop"></i>
                     <div class="slidecontainer d-inline-block mt-1 ">
@@ -377,10 +379,106 @@
       </footer>
     </div>
 
+    <!-- Side bar for small screen -->
+
+    <div class="d-block d-md-none smalltab">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="row p-4 mb-5">
+          <div class="col-6">
+            <a href=""><img class="img-fluid text-center mb-2" src="spotify_black.png" alt=""/></a>
+          </div>
+          <div class="col-6">
+            <a href="home.html"><h5 class="text-white small">Home</h5></a>
+            <a  href=""><h5 class="text-white small my-3">Search</h5></a>
+            <a href=""><h5 class="text-white small">Your Library</h5></a>
+          </div>         
+        </div>
+      </div>
+      <nav class="navbar navbar-dark">
+        <a href="home.html">
+          <svg viewBox="0 0 512 512" width="30" height="30" xmlns="http://www.w3.org/2000/svg"><path d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z" fill="currentColor"></path></svg>
+        </a>
+
+        <a href="">
+          <svg viewBox="0 0 512 512" width="30" height="30" xmlns="http://www.w3.org/2000/svg"><path d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z" fill="currentColor" fill-rule="evenodd"></path></svg>
+         </a>
+
+         <a href=""><svg viewBox="0 0 512 512" width="30" height="30" xmlns="http://www.w3.org/2000/svg"><path d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z" fill="currentColor"></path></svg></a>
+
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+      </nav>
+    </div> 
+
+    <!-- Side bar for small screen END-->
+
+    <!-- Footer for small screen -->
+
+    <div class="d-block d-md-none" id="smallFooter">
+      <nav class="navbar navbar-dark">
+        <div>
+          <img src="footerassets/michael-jackson-smooth-criminal.jpg" class="img-fluid" alt="">
+        </div>
+                 
+        <div>
+          <!-- Back -->
+          <i class="fas fa-step-backward mx-4"></i>
+
+          <!-- Play -->
+          <svg
+            class="play"
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            fill="currentColor"
+            class="bi bi-play-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+            />
+            <path
+              d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"
+            />
+          </svg>
+          <!-- pause -->
+          <svg
+            class="pause"
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            fill="currentColor"
+            class="bi bi-pause-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+            />
+            <path
+              d="M5 6.25a1.25 1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0v-3.5zm3.5 0a1.25 1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0v-3.5z"
+            />
+          </svg>
+          <!-- next -->
+          <i class="fas fa-step-forward mx-3"></i> 
+        </div>
+        <div>
+          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        </div>
+          
+      </nav>
+    </div> 
+
+    <!-- Footer for small screen END-->
+
     <script>
       const audio = document.getElementById("myAudio");
       const playButton = document.querySelector(".play");
+      const smallPlayButton = document.querySelector("#smallFooter .play");
       const pauseButton = document.querySelector(".pause");
+      const smallPauseButton = document.querySelector("#smallFooter .pause");
       function play() {
         playButton.addEventListener("click", function (e) {
           audio.play();
@@ -394,6 +492,19 @@
         });
       }
 
+      function smallplay() {
+        smallPlayButton.addEventListener("click", function (e) {
+          audio.play();
+          smallPlayButton.style.visibility = "hidden";
+          smallPauseButton.style.visibility = "visible";
+        });
+        smallPauseButton.addEventListener("click", function (e) {
+          audio.pause();
+          smallPauseButton.style.visibility = "hidden";
+          smallPlayButton.style.visibility = "visible";
+        });
+      }
+
       function backward() {
         const previousButton = document.querySelector(".fa-step-backward");
         previousButton.addEventListener("click", function (e) {
@@ -401,9 +512,23 @@
         });
       }
 
+      function smallBackward() {
+        const smallPreviousButton = document.querySelector("#smallFooter .fa-step-backward");
+        smallPreviousButton.addEventListener("click", function (e) {
+          audio.currentTime -= 30.0;
+        });
+      }
+
       function forward() {
         const nextButton = document.querySelector(".fa-step-forward");
         nextButton.addEventListener("click", function (e) {
+          audio.currentTime += 30.0;
+        });
+      }
+
+      function smallForward() {
+        const smallNextButton = document.querySelector("#smallFooter .fa-step-forward");
+        smallNextButton.addEventListener("click", function (e) {
           audio.currentTime += 30.0;
         });
       }
@@ -416,8 +541,11 @@
       }
       window.onload = function () {
         play();
+        smallplay()
         backward();
+        smallBackward()
         forward();
+        smallForward()
         restart();
       };
     </script>
