@@ -352,10 +352,8 @@ footer {
         right: 0;
         left: 0;
         bottom: 78px;
-        z-index: 10;
+        z-index: 101;
     }
-  
-    
 }
 
 /* @media screen and (min-width: 1250px) {
@@ -912,11 +910,25 @@ z-index:2;
     border-color: rgba(24, 24, 24, 0);
     border-radius: 0.5em;
     /* z-index: 5; */
+    transform: translateX(0px);  
+    transition: 1s all;
 
 }
 
 /* change card appearance on hover */
 #cardsDeck .card:hover {
+    transform: scale(1.09);
+    /* box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2); */
+    cursor: pointer;
+    z-index: 3;
+}
+
+#queen{
+    transform: translateX(0px);  
+    transition: 1s all;
+}
+
+#queen:hover{
     transform: scale(1.09);
     /* box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2); */
     cursor: pointer;
@@ -947,6 +959,16 @@ z-index:2;
     padding: 8px;
     padding-bottom: 0;
     /* z-index: 2; */
+}
+
+#cardsDeck .card :hover::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color:  rgba(0,0,0,0.4);
 }
 
 /* #cardsDeck .second-row .card::before {
