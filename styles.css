@@ -233,7 +233,7 @@ footer div>p{
 
  /* HOME SIDE BAR */
 
-/*  #menu .sideBottom{
+  #menu .sideBottom{
      color: #B1B1B1;
  }
 
@@ -273,7 +273,7 @@ footer div>p{
 
 .sideBottom .row>.col-6:first-of-type a:first-of-type{
     border-right: 1px solid #B1B1B1;
-} */
+}
 
 /* SIDE BAR OTHER */
 
@@ -441,13 +441,13 @@ input{
     position: fixed;
     right: 0;
     left: 0;
-    bottom: 50px;
+    bottom: 78px;
     z-index: 100;
   }
 
   #smallFooter .navbar{
     background-color: #2c2c2c!important;
-    height: 60px;
+    height: 78px;
     padding: 0.5rem 0.4rem;
   
   }
@@ -790,7 +790,7 @@ p.small{
 /* navbar on the top */
 .navbar{
     background-color: rgb(12, 10, 10);
-    height: 50px;
+    height: 78px;
 }
 
 /* this is p inside the table */
