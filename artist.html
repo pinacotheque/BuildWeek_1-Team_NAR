@@ -135,7 +135,9 @@
               <div class="row justify-content-center mt-4 pt-5">
                 <div class="d-flex flex-column text-center z-index:2">
                   <p>33,000,575 MONTHLY LISTENERS</p>
-                  <h1><strong>Queen</strong></h1>
+                  <div id="artistHeader">
+                    <!-- <h1 ><strong></strong></h1> -->
+                  </div>
                   <div class="d-md-flex flex-row text-center mt-3 d-none">
                     <button
                       type="button"
@@ -672,25 +674,25 @@
       };
     </script>
 
-
-
-
-
+    
 
     <!-- fetch api for dynamically generated list -->
-
-
 
 
 
     <script>
       let artistCollection = [];
       const artistList = document.querySelector('#location')
-      function renderArtist(artist=artistCollection) {
-             
+      const header = document.getElementById('artistHeader');
+   
+     
 
+
+      function renderArtist(artist=artistCollection) {
+    
         artist.forEach((artist)=>{
-          artistList.innerHTML += `<div class="col px-0 mb-4">
+
+          artistList.innerHTML += (`<div class="col px-0 mb-4">
                     <div class="card h-100">
                       <a href="album.html">
                         <img
@@ -700,19 +702,42 @@
                       <div class="card-play"></div>
                       <div class="card-body text-center p-3">
                         <p class="card-text text-white mb-0 mt-1">
-                          ${artist.album.artist}
+                          ${artist.album.title}
                         <p class="card-text text-muted">
                           <small class="text-muted">
                             <strong>${artist.artist.name}</strong>
                           </small>
                         </p>
                       </div>
-                    </div>`
-        }).join("")
+                    </div>`),
+                    header.innerHTML += `<h1 ><strong>${artist.album.name}</strong></h1>`
+
+          
+        });   
         
     
-        
       }
+
+
+
+      let albumInfo = []
+      const albumId = new URLSearchParams(window.location.search).get('id')
+      console.log(albumId)
+      
+      const renderAlbum = (albumInfo) => {
+      const picture = document.getElementById('albumPicture')
+      
+        picture.innerHTML = `<a href="artist.html"><img id="queen" class="w-60 img-fluid"
+                    src=${albumInfo.cover_medium}
+                    class="  d-block float-end" alt="..."></a>`
+      }
+
+
+     
+
+
+
+
 
       window.onload = () => {
         fetch(
@@ -723,7 +748,6 @@
             console.log(artistCollection)
             renderArtist(artistCollection)
           })
-          
           .catch((err) => {
             console.log("Rejected:", err);
           });
