@@ -136,67 +136,20 @@
                         <span>SEE ALL</span>
                     </div> -->
                 </div>
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-6 px-5">
-                    <div class="col px-0 mb-4">
+                <div id="homeAlbums" class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-6 px-5">
+
+                    <!-- <div class="col px-0 mb-4">
                       <div class="card h-100">
                         <a href="artist.html"><img src=https://i.pinimg.com/474x/ae/06/a8/ae06a82d58ad8cf657476ac2785c2dc6.jpg class="card-img-top" alt="..."></a>
-                        <!-- <i class="fab fa-spotify"></i> -->
+                        <i class="fab fa-spotify"></i>
                         <div class="card-body text-center p-3">
                           <h5 class="card-title">Italian Karaoke</h5>
-                          <!-- <p class="card-text">Disclosure</p> -->
+                          <p class="card-text">Disclosure</p>
                         </div>
                       </div>
-                    </div>
-                    <div class="col px-0 mb-4">
-                      <div class="card h-100">
-                        <a href="artist.html"><img src=https://i.scdn.co/image/ab67706f00000003a17f4dcafbda16b7d92cdb12 class="card-img-top" alt="..."></a>
-                        <!-- <i class="fab fa-spotify"></i> -->
-                        <div class="card-body text-center p-3">
-                          <h5 class="card-title">Sweet Jazz</h5>
-                          <!-- <p class="card-text">Nothing But Thieves</p> -->
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col px-0 mb-4">
-                      <div class="card h-100">
-                        <a href="artist.html"><img src=https://pbs.twimg.com/media/DoK3lsKWkAAKGvy.jpg:large class="card-img-top" alt="..."></a>
-                        <!-- <i class="fab fa-spotify"></i> -->
-                        <div class="card-body text-center p-3">
-                          <h5 class="card-title">Italy's Frecuent Rotation</h5>
-                          <!-- <p class="card-text">Tool</p> -->
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col px-0 mb-4">
-                      <div class="card h-100">
-                        <a href="artist.html"><img src=https://pbs.twimg.com/media/DqRs-kUWsAIZQWc.jpg class="card-img-top" alt="..."></a>
-                        <!-- <i class="fab fa-spotify"></i> -->
-                        <div class="card-body text-center p-3">
-                          <h5 class="card-title">00's Italy</h5>
-                          <!-- <p class="card-text">Red Hot Chilli Pepers</p> -->
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col px-0 mb-4">
-                      <div class="card h-100">
-                        <a href="artist.html"><img src=https://i.scdn.co/image/ab67706f000000021907f15a148948007f05dde9 class="card-img-top" alt="..."></a>
-                        <!-- <i class="fab fa-spotify"></i> -->
-                        <div class="card-body text-center p-3">
-                          <h5 class="card-title">Cocktail Hour</h5>
-                          <!-- <p class="card-text">Nothing But Thieves</p> -->
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col px-0 mb-4">
-                      <div class="card h-100">
-                        <a href="artist.html"><img src=https://i.scdn.co/image/ab67706f000000035f4b625f7dfcb4733381bac3 class="card-img-top" alt="..."></a>
-                        <!-- <i class="fab fa-spotify"></i> -->
-                        <div class="card-body text-center p-3">
-                          <h5 class="card-title">I love My '90's Hip hop</h5>
-                          <!-- <p class="card-text">Disclosure</p> -->
-                        </div>
-                      </div>
-                    </div>
+                    </div> -->
+              
+                    
                   </div>
                 </div>
                 <!-- first Row END (#THROWBACKTHURSDAY) -->
@@ -582,5 +535,51 @@ src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.j
 integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
 crossorigin="anonymous"
     ></script>
+
+    <!-- ===================== M3D5 ==========================-->
+
+    <script>
+let albumCollection = []
+
+// =============== gets the id of an album when clicked =============
+const getAlbumId = (e) => {
+  const imgUrl = e.currentTarget.src
+  const clickedAlbum = albumCollection.find(album => album.album.cover_big === imgUrl)
+  console.log(clickedAlbum.id)
+  return clickedAlbum.id
+}
+
+// =====================  redering albums =====================
+function renderAlbums(albumCollection, location='homeAlbums'){
+  // console.log(location)
+      const albumsHome = document.getElementById(location)
+      // console.log(albumCollection[0].album.cover_big)
+      albumsHome.innerHTML = albumCollection.map(album => ` <div class="col px-0 mb-4">
+                      <div class="card h-100">
+                        <a href="album.html?id=${album.album.id}"><img src=${album.album.cover_big} class="card-img-top" alt="..."></a>
+                        <i class="fab fa-spotify"></i>
+                        <div class="card-body text-center p-3">
+                          <h5 class="card-title">${album.album.title}</h5>
+                          <p class="card-text">${album.artist.name}</p>
+                        </div>
+                      </div>
+                    </div> `
+      ).join('')
+      // console.log(albumsHome)
+}
+
+//=====================  fetching information ================
+window.onload = () => {
+    fetch('https://striveschool-api.herokuapp.com/api/deezer/search?q=metallica')
+    .then(response => response.json())
+    .then(albums => {
+        albumCollection = albums.data
+        console.log(albumCollection)
+        renderAlbums(albumCollection)
+    })
+    .catch((err) => console.error(err.message))
+}
+
+    </script>
   </body>
 </html>

@@ -81,7 +81,7 @@
               <div class="col-12 col-sm-12 col-md-4 p-0 mt-5 ">
                 
 
-                <div class="d-flex align-center justify-content-center">
+                <div id="albumPicture" class="d-flex align-center justify-content-center">
                   <a href="artist.html"><img id="queen" class="w-60 img-fluid"
                     src="https://upload.wikimedia.org/wikipedia/en/thumb/4/43/Queen_II_%28album_cover%29.jpg/220px-Queen_II_%28album_cover%29.jpg"
                     class="  d-block float-end" alt="..."></a>
@@ -505,6 +505,10 @@
     <!-- Footer for small screen END-->
 
     <script>
+
+      
+
+
     const audio = document.getElementById("myAudio");
     const playButton = document.querySelector(".play");
     const smallPlayButton = document.querySelector("#smallFooter .play");
@@ -588,5 +592,34 @@
     integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
     crossorigin="anonymous"></script>
 
+
+    <!-- spotify M3D5 =================== -->
+    <script>
+      let albumInfo = []
+      const albumId = new URLSearchParams(window.location.search).get('id')
+      console.log(albumId)
+      
+      const renderAlbum = (albumInfo) => {
+        const picture = document.getElementById('albumPicture')
+
+        picture.innerHTML = `<a href="artist.html"><img id="queen" class="w-60 img-fluid"
+                    src=${albumInfo.cover_medium}
+                    class="  d-block float-end" alt="..."></a>`
+
+      }
+
+      window.onload = () => {
+    fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${albumId}`)
+    .then(response => response.json())
+    .then(album => {
+        albumInfo = album
+
+        console.log(album)
+        renderAlbum(albumInfo)
+    })
+    .catch((err) => console.error(err.message))
+}
+
+    </script>
   </body>
 </html>
