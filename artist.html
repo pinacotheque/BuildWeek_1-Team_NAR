@@ -681,20 +681,23 @@
 
 
     <script>
+      const artistId = new URLSearchParams(window.location.search).get('id')
+      console.log(artistId)
+
       let artistCollection = [];
-      const artistList = document.querySelector('#location')
       const header = document.getElementById('artistHeader');
-   
-     
-
-
-      function renderArtist(artist=artistCollection) {
-    
-        artist.forEach((artist)=>{
+      // header.innerHTML = `<h1 ><strong>${artistCollection[0].artist.name}</strong></h1>`
+      
+      
+      function renderArtist(artistCollection) {
+        const header = document.getElementById('artistHeader');
+        header.innerHTML = `<h1 ><strong>${artistCollection[0].artist.name}</strong></h1>`
+        const artistList = document.querySelector('#location')
+        artistCollection.forEach((artist)=>{
 
           artistList.innerHTML += (`<div class="col px-0 mb-4">
                     <div class="card h-100">
-                      <a href="album.html">
+                      <a href="album.html?id=${artist.album.id}">
                         <img
                         src=${artist.album.cover_big}
                         class="card-img-top" alt="...">
@@ -709,8 +712,8 @@
                           </small>
                         </p>
                       </div>
-                    </div>`),
-                    header.innerHTML += `<h1 ><strong>${artist.album.name}</strong></h1>`
+                    </div>`)
+                   
 
           
         });   
@@ -720,17 +723,14 @@
 
 
 
-      let albumInfo = []
-      const albumId = new URLSearchParams(window.location.search).get('id')
-      console.log(albumId)
+      // let albumInfo = []
+      // const renderAlbum = (albumInfo) => {
+      // const picture = document.getElementById('albumPicture')
       
-      const renderAlbum = (albumInfo) => {
-      const picture = document.getElementById('albumPicture')
-      
-        picture.innerHTML = `<a href="artist.html"><img id="queen" class="w-60 img-fluid"
-                    src=${albumInfo.cover_medium}
-                    class="  d-block float-end" alt="..."></a>`
-      }
+      //   picture.innerHTML = `<a href="artist.html"><img id="queen" class="w-60 img-fluid"
+      //               src=${albumInfo.cover_medium}
+      //               class="  d-block float-end" alt="..."></a>`
+      // }
 
 
      
@@ -741,10 +741,10 @@
 
       window.onload = () => {
         fetch(
-          "https://striveschool-api.herokuapp.com/api/deezer/search?q=queen"
-        ) .then((response) => response.json())
-          .then((artist) => {
-            artistCollection=artist.data
+          `https://striveschool-api.herokuapp.com/api/deezer/search?q=${artistId}`
+        ) .then(response => response.json())
+          .then(artistAlbums => {
+            artistCollection=artistAlbums.data
             console.log(artistCollection)
             renderArtist(artistCollection)
           })

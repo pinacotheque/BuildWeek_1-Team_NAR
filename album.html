@@ -452,12 +452,12 @@
         picture.innerHTML = `
                     
                     <div id="albumPicture" class="d-flex align-center justify-content-center">
-                  <a href="artist.html"><img id="queen" class="w-60 img-fluid"
+                      <a href="artist.html?id=${albumInfo.artist.name}"><img id="queen" class="w-60 img-fluid"
                     src=${albumInfo.cover_medium}
                     class="  d-block float-end" alt="..."></a>
                   </div>
                   <h5 class="queen-II text-center mt-2">${albumInfo.title}</h5>
-                  <p class="small text-center mt-1">${albumInfo.artist.name}</p>
+                  <a href="artist.html?id=${albumInfo.artist.name}"><p class="small text-center mt-1">${albumInfo.artist.name}</p></a>
                   <div class="text-center"
                   >
                     <button type="button" class="btn badge-pill btn-success btn-sm myBtn">PLAY</button></div>
@@ -479,7 +479,7 @@
                       <tr scope="row ">
                       <td><i class="fas fa-music"></i></th>
                       <td class="col "> <a href="#">${songs[i].title}</a> 
-                      <p>${albumInfo.artist.name}</p></td>
+                        <a href="artist.html?id=${albumInfo.artist.name}"><p>${albumInfo.artist.name}</p></a></td>
                    <td class="col duration">${durations}</td>
           `}
 

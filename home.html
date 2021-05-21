@@ -568,7 +568,7 @@ function renderAlbums(albumCollection, location='homeAlbums'){
                         <i class="fab fa-spotify"></i>
                         <div class="card-body text-center p-3">
                           <h5 class="card-title">${album.album.title}</h5>
-                          <p class="card-text">${album.artist.name}</p>
+                          <a href="artist.html?id=${album.artist.name}"><p class="card-text">${album.artist.name}</p></a>
                         </div>
                       </div>
                     </div> `
