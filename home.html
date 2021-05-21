@@ -44,8 +44,16 @@
                   <a class="pl-3" href="home.html">Home</a>
                 </li>
                 <li class="my-4">
-                    <svg viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z" fill="currentColor" fill-rule="evenodd"></path></svg>
-                  <a class="pl-3" href="">Search</a>
+                    <!-- <svg viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z" fill="currentColor" fill-rule="evenodd"></path></svg> -->
+                  <!-- <a class="pl-3" href="">Search</a> -->
+                  <div id="searchBar" class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="search()">
+                        <svg viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z" fill="currentColor" fill-rule="evenodd"></path></svg>
+                      </button>
+                    </div>
+                  </div>
                 </li>
                 <li>
                     <svg viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z" fill="currentColor"></path></svg>
@@ -556,7 +564,7 @@ function renderAlbums(albumCollection, location='homeAlbums'){
       // console.log(albumCollection[0].album.cover_big)
       albumsHome.innerHTML = albumCollection.map(album => ` <div class="col px-0 mb-4">
                       <div class="card h-100">
-                        <a href="album.html?id=${album.album.id}"><img src=${album.album.cover_big} class="card-img-top" alt="..."></a>
+                        <a href="album.html?id=${album.album.id}"><img src=${album.album.cover_medium} class="card-img-top" alt="..."></a>
                         <i class="fab fa-spotify"></i>
                         <div class="card-body text-center p-3">
                           <h5 class="card-title">${album.album.title}</h5>
@@ -570,7 +578,7 @@ function renderAlbums(albumCollection, location='homeAlbums'){
 
 //=====================  fetching information ================
 window.onload = () => {
-    fetch('https://striveschool-api.herokuapp.com/api/deezer/search?q=metallica')
+    fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=metallica`)
     .then(response => response.json())
     .then(albums => {
         albumCollection = albums.data
@@ -580,6 +588,29 @@ window.onload = () => {
     .catch((err) => console.error(err.message))
 }
 
+function fechtnew(Query) {
+  fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${Query}`)
+    .then(response => response.json())
+    .then(albums => {
+        albumCollection = albums.data
+        console.log(albumCollection)
+        renderAlbums(albumCollection)
+    })
+    .catch((err) => console.error(err.message))
+}
+
+
+function search() {
+    const searchBar = document.querySelector('#searchBar>input')
+    const Query = searchBar.value
+    const searchResults = albumCollection.filter(album => album.album.title.toLowerCase().includes(Query.toLowerCase()))
+    console.log(searchResults)
+    if (searchResults.length > 0){
+      renderAlbums(searchResults)
+    } else {
+      fechtnew(Query)
+    }
+}
     </script>
   </body>
 </html>
