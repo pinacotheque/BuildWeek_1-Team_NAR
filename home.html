@@ -578,7 +578,7 @@ function renderAlbums(albumCollection, location='homeAlbums'){
 
 //=====================  fetching information ================
 window.onload = () => {
-    fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=metallica`)
+    fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=fighters`)
     .then(response => response.json())
     .then(albums => {
         albumCollection = albums.data

@@ -129,15 +129,71 @@
           </div>
           <!-- Sidebar end -->
 
-          <div id="contentArtist" class="col-12 col-xl-10 mb-5">
-            <div class="container">
+          <div id="contentArtist" class="col-12 col-xl-10 px-0 mb-5 w-100">
+            <div class="bg-dark m-0 border-0 text-white w-100">
+              <div class="artistImage">
+                <img id="artistImage" src="" class="card-img img-fluid w-100 h-100" alt="...">
+              </div>
+              <div class="card-img-overlay d-flex flex-column justify-content-between align-items-center mx-auto w-50">
+                <p class="mt-5">33,000,575 MONTHLY LISTENERS</p>
+                <div id="artistHeader" class="row p-3" style="z-index: 1">
+                  <h1 ><strong>Queen</strong></h1>
+                </div>
+                <!-- <div class="row mx-auto"> -->
+                  <div class="row mx-auto">
+                    <button
+                    type="button"
+                    class="btn badge-pill btn-primary playbtn"
+                  >
+                    PLAY
+                    </button>
+                    <button
+                    type="button"
+                    class="btn badge-pill btn-secondary follow"
+                  >
+                    FOLLOW
+                    </button>
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="50"
+                    height="50"
+                    class="bi bi-three-dots"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
+                    />
+                    </svg>
+                  </div>
+                  
+                  <div class="row mx-auto mt-auto" style="z-index: 1">
+                    <ul class="nav nav-tabs justify-content-around">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                          <strong>OVERVIEW</strong>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">
+                          <strong>RELATED ARTISTS</strong>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#"><strong>ABOUT</strong></a>
+                      </li>
+                    </ul>
+                  </div>
+              <!-- </div> -->
+            </div>
+            
+            <!-- <div id="artistImage" class="container"> -->
               <!-- Upper body -->
-              <div class="row justify-content-center mt-4 pt-5">
+              <!-- <div class="row justify-content-center mt-4 pt-5">
                 <div class="d-flex flex-column text-center z-index:2">
                   <p>33,000,575 MONTHLY LISTENERS</p>
-                  <div id="artistHeader">
+                  <div id="artistHeader" style="z-index: 1"> -->
                     <!-- <h1 ><strong></strong></h1> -->
-                  </div>
+                  <!-- </div>
                   <div class="d-md-flex flex-row text-center mt-3 d-none">
                     <button
                       type="button"
@@ -218,13 +274,13 @@
                     </ul>
                   </div>
                 </div>
-              </div>
+              </div> -->
               <!-- Upper body end -->
-            </div>
-
-            <section id="cardsDeck" class="artist-cards">
+            <!-- </div> -->
+          </div>
+            <section id="cardsDeck" class="artist-cards mt-5">
               <div class="row mx-5">
-                <div id="deckHeader" class="row w-100">
+                <div id="deckHeader" class="row w-100 mt-5 pt-5">
                   <div class="mt-4 mb-1">
                     <h3>Albums</h3>
                     <!-- <span>Description for this deck of cards / section of music</span> -->
@@ -269,7 +325,7 @@
                 </div>
               </div>
             </section>
-          </div>
+          
         </div>
       </main>
 
@@ -690,11 +746,15 @@
       
       
       function renderArtist(artistCollection) {
+        const artistImage = document.getElementById('artistImage')
+        artistImage.src = artistCollection[0].artist.picture_xl
+        console.log(artistImage)
+
         const header = document.getElementById('artistHeader');
         header.innerHTML = `<h1 ><strong>${artistCollection[0].artist.name}</strong></h1>`
+
         const artistList = document.querySelector('#location')
         artistCollection.forEach((artist)=>{
-
           artistList.innerHTML += (`<div class="col px-0 mb-4">
                     <div class="card h-100">
                       <a href="album.html?id=${artist.album.id}">
@@ -712,13 +772,9 @@
                           </small>
                         </p>
                       </div>
-                    </div>`)
-                   
-
-          
+                    </div>`
+            )
         });   
-        
-    
       }
 
 
